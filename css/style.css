@@ -1,0 +1,993 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-family: "Rufina", sans-serif;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.text-title {
+  font-size: 4.2rem;
+  color: #1e2528;
+  line-height: 5.5rem;
+}
+
+.text-title-sm {
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  color: #263a41;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #888;
+}
+
+.text-light {
+  color: #999;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-info {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  margin-top: 2rem;
+  font-family: "roboto", sans-serif;
+  letter-spacing: 0.03rem;
+}
+
+.text-info-sm {
+  font-size: 1.4rem;
+  line-height: 2.7rem;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-orange {
+  background-color: #ff817e;
+}
+
+.bg-dark {
+  background-color: #30383b;
+}
+
+.bg-snow {
+  background-color: #fff9f8;
+}
+
+.btn-read-more {
+  width: 17rem;
+  height: 5rem;
+  display: block;
+  margin: 0 auto;
+  line-height: 5rem;
+  text-align: center;
+  border-radius: 5rem;
+  font-family: "roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.image {
+  margin: 0 auto;
+}
+
+.image a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.image a img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 192rem;
+  margin: 0 auto;
+}
+
+.header__banner {
+  width: 100%;
+  min-height: 89rem;
+  background-image: url(../images/04_SPA_banner1.png), url(../images/04_SPA_banner2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 14.5rem left, bottom right;
+  padding-top: 6rem;
+}
+
+.nav {
+  height: 5rem;
+}
+
+.nav .nav__brand .nav__logo {
+  padding-left: 0.7rem;
+  line-height: 4.8rem;
+  position: relative;
+  font-family: "Playfair Display";
+  font-size: 3rem;
+  font-weight: bold;
+  color: #211833;
+  letter-spacing: 0.1rem;
+}
+
+.nav .nav__brand .nav__logo::after {
+  content: "";
+  width: 5rem;
+  height: 4.1rem;
+  background: url(../images/04_SPA_icon1.png) no-repeat;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.nav .nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.nav .nav__menu .nav__item {
+  margin-right: 5rem;
+}
+
+.nav .nav__menu .nav__item .nav__link {
+  font-family: "roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 4.5rem;
+  font-weight: bold;
+  color: #263a41;
+}
+
+.hero {
+  margin-top: 15rem;
+}
+
+.hero .hero__title1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #ff817e;
+  line-height: 7.2rem;
+}
+
+.hero .hero__title2 {
+  font-size: 6rem;
+  color: #1e2528;
+  line-height: 7.5rem;
+}
+
+.hero .hero__info {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 2.7rem;
+}
+
+.hero .hero__button {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .hero__button .hero__link {
+  width: 17rem;
+  height: 5rem;
+  line-height: 5rem;
+  display: block;
+  margin-right: 5.5rem;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.hero .hero__button .hero__link i.fa-arrow-right {
+  margin-left: 1rem;
+}
+
+.hero .hero__button .btn-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 0.8rem;
+}
+
+.hero .hero__button .btn-video .play {
+  display: inline-block;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  background-color: #fcf5ee;
+  position: relative;
+}
+
+.hero .hero__button .btn-video .play::after {
+  content: "";
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 1rem solid #ff817e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-25%, -50%);
+          transform: translate(-25%, -50%);
+}
+
+.hero .hero__button .btn-video .btn-text {
+  font-family: "roboto", sans-serif;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.about {
+  width: 100%;
+  min-height: 71.5rem;
+  background-image: url(../images/04_SPA_banner3.png), url(../images/04_SPA_banner4.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 1.5rem left 32.5rem, top 27.5rem right 13rem;
+}
+
+.about .container,
+.about .row {
+  height: 71.5rem;
+}
+
+.about .icon__image {
+  width: 8.4rem;
+  height: 7rem;
+  margin-bottom: 2rem;
+}
+
+.about .text__about {
+  font-family: "roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 5.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.about .text-info-about {
+  margin-top: 3rem;
+}
+
+.about .hero__button {
+  margin-top: 6.6rem;
+}
+
+.feature {
+  width: 100%;
+  min-height: 57rem;
+}
+
+.feature .feature__row {
+  width: 100%;
+  height: 57rem;
+  margin: 0 -0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feature .feature__row .feature__col {
+  width: 25%;
+  height: 57rem;
+  padding: 0 0.25rem;
+}
+
+.feature .feature__row .feature__col .feature__content {
+  width: 100%;
+  height: 100%;
+  background: url(../images/04_SPA_big-image.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+.feature .feature__row .feature__col .feature__content .hover__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.feature .feature__row .feature__col .feature__content .hover__content .image {
+  width: 4.7rem;
+  height: 4.2rem;
+}
+
+.feature .feature__row .feature__col .feature__content .hover__content .feature__info {
+  margin-top: 2rem;
+}
+
+.feature .feature__row .feature__col .feature__content .hover__content .feature__info .feature__text {
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+
+.feature .feature__row .feature__col .feature__content:hover {
+  background-image: url(../images/04_SPA_big-image1.png);
+}
+
+.feature .feature__row .feature__col .feature__content:hover .hover__content {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.service,
+.blog {
+  margin-top: 12.8rem;
+}
+
+.service .service__products,
+.blog .service__products {
+  margin-top: 8.5rem;
+}
+
+.service .service__products .service__product,
+.blog .service__products .service__product {
+  padding: 2rem;
+  padding-bottom: 5rem;
+  margin-bottom: 4rem;
+  border: 0.1rem solid #e3e6ea;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.service .service__products .service__product .image,
+.blog .service__products .service__product .image {
+  width: 100%;
+  height: 26.5rem;
+}
+
+.service .service__products .service__product .product__info,
+.blog .service__products .service__product .product__info {
+  margin-top: 2rem;
+}
+
+.service .service__products .service__product .product__info p,
+.blog .service__products .service__product .product__info p {
+  margin-top: 0.8rem;
+}
+
+.service .service__products .service__product .product__info .btn-product,
+.blog .service__products .service__product .product__info .btn-product {
+  margin-top: 4rem;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.service .service__products .service__product .product__info .btn-product:hover,
+.blog .service__products .service__product .product__info .btn-product:hover {
+  background-color: #ff817e;
+}
+
+.service .service__products .service__product:hover,
+.blog .service__products .service__product:hover {
+  border-color: transparent;
+  -webkit-box-shadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials {
+  width: 100%;
+  margin-top: 10rem;
+  padding: 13.5rem 0;
+}
+
+.testimonials .tes__item .tes__quote {
+  font-size: 6rem;
+  color: #ff817e;
+}
+
+.testimonials .tes__item .tes__text {
+  margin-top: 3.5rem;
+  font-size: 1.8rem;
+  color: #263a41;
+  line-height: 3.5rem;
+}
+
+.testimonials .tes__item .tes__image {
+  margin-top: 4.3rem;
+}
+
+.testimonials .tes__item .tes__image .image {
+  width: 7.6rem;
+  height: 7.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials .tes__item .tes__sign {
+  margin-top: 2.5rem;
+  font-size: 2.2rem;
+  line-height: 3.5rem;
+  color: #263a41;
+}
+
+.testimonials .tes__item .tes__sign span {
+  font-family: "roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+.testimonials .owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 5rem;
+}
+
+.testimonials .owl-theme .owl-dots button.owl-dot:focus {
+  outline: none;
+  border: none;
+}
+
+.testimonials .owl-theme .owl-dots button.owl-dot span {
+  background-color: #ffc3c2;
+}
+
+.testimonials .owl-theme .owl-dots button.owl-dot:hover span, .testimonials .owl-theme .owl-dots button.owl-dot.active span {
+  background-color: #ff817e;
+}
+
+.team {
+  width: 100%;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
+}
+
+.team .team__content {
+  margin-top: 8.5rem;
+}
+
+.team .team__content .team__partner {
+  position: relative;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  margin-bottom: 15.5rem;
+}
+
+.team .team__content .team__partner .partner__info {
+  width: 30rem;
+  min-height: 17rem;
+  background-color: #fff;
+  padding-top: 3.5rem;
+  position: absolute;
+  bottom: -11.7rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.team .team__content .team__partner .partner__info .text-info-partner {
+  font-family: "roboto", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.7rem;
+}
+
+.team .team__content .team__partner .partner__info .partner__contact {
+  margin-top: 2.3rem;
+}
+
+.team .team__content .team__partner .partner__info .partner__contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team .team__content .team__partner .partner__info .partner__contact ul li {
+  margin: 0 0.75rem;
+}
+
+.team .team__content .team__partner .partner__info .partner__contact ul li a {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  line-height: 3rem;
+  text-align: center;
+  border: 0.1rem solid #30383b;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #30383b;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.team .team__content .team__partner .partner__info .partner__contact ul li a:hover {
+  border: 0.1rem solid #ff817e;
+  background-color: #ff817e;
+  color: #fff;
+}
+
+.team .team__content .team__partner:hover {
+  -webkit-box-shadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.team .team__content .team__partner:hover .partner__info {
+  bottom: -5.3rem;
+}
+
+.appointment {
+  width: 100%;
+  min-height: 64.2rem;
+  position: relative;
+}
+
+.appointment::after {
+  content: "";
+  width: calc(50% - 18rem);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/04_SPA_image778x642.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.appointment .form {
+  margin-top: 9rem;
+}
+
+.appointment .form .form__item .item__content {
+  position: relative;
+}
+
+.appointment .form .form__item .item__content label {
+  position: absolute;
+  bottom: 1.7rem;
+  right: 0.5rem;
+  color: #999;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.appointment .form .form__item .item__content input,
+.appointment .form .form__item .item__content select,
+.appointment .form .form__item .item__content textarea {
+  width: 100%;
+  margin-top: 2.2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: inherit;
+  color: #999;
+  font-family: "roboto", sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  padding: 1.7rem 0;
+}
+
+.appointment .form .form__item .item__content input::-webkit-input-placeholder,
+.appointment .form .form__item .item__content select::-webkit-input-placeholder,
+.appointment .form .form__item .item__content textarea::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.appointment .form .form__item .item__content input:-ms-input-placeholder,
+.appointment .form .form__item .item__content select:-ms-input-placeholder,
+.appointment .form .form__item .item__content textarea:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.appointment .form .form__item .item__content input::-ms-input-placeholder,
+.appointment .form .form__item .item__content select::-ms-input-placeholder,
+.appointment .form .form__item .item__content textarea::-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.appointment .form .form__item .item__content input::placeholder,
+.appointment .form .form__item .item__content select::placeholder,
+.appointment .form .form__item .item__content textarea::placeholder {
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.appointment .form .form__item .item__content input:focus,
+.appointment .form .form__item .item__content select:focus,
+.appointment .form .form__item .item__content textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.appointment .form .form__item .item__content input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.appointment .form .form__item .item__content textarea {
+  margin-top: 5.5rem;
+}
+
+.appointment .form .form__item .line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #999;
+}
+
+.appointment .form .btn-appointment {
+  outline: none;
+  border: none;
+  width: 20rem;
+  height: 5rem;
+  margin-top: 3.8rem;
+  text-align: center;
+  line-height: 5rem;
+  border-radius: 5rem;
+  font-family: "roboto", sans-serif;
+  font-size: 1.4rem;
+}
+
+.appointment .form .btn-appointment:focus {
+  outline: none;
+  border: none;
+}
+
+.blog {
+  margin-top: 13.2rem;
+}
+
+.blog .item__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.7rem;
+}
+
+.blog .item__date li {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  font-family: "roboto", sans-serif;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.contact {
+  width: 100%;
+  padding: 14rem;
+}
+
+.contact .contact__item {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact__item .contact__icon {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  line-height: 5rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ff817e;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.contact .contact__item .contact__link {
+  width: calc(100% - 8rem);
+  font-family: "roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #888;
+  line-height: 2.7rem;
+}
+
+.contact .contact__form .contact-name,
+.contact .contact__form .contact-email,
+.contact .contact__form .contact-comment {
+  border: 0.05rem solid #e3e6ea;
+  width: 100%;
+  padding: 1.7rem 2.2rem;
+  font-family: "roboto", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+.contact .contact__form .contact-name:focus,
+.contact .contact__form .contact-email:focus,
+.contact .contact__form .contact-comment:focus {
+  outline: none;
+}
+
+.contact .contact__form .contact-comment {
+  height: 15rem;
+  padding-top: 3.2rem;
+  padding-left: 2.2rem;
+}
+
+.contact .contact__form .btn__contact {
+  outline: none;
+  border: none;
+  width: 17rem;
+  height: 5rem;
+  margin-top: 0.7rem;
+  text-align: center;
+  line-height: 5rem;
+  border-radius: 5rem;
+  font-family: "roboto", sans-serif;
+  font-size: 1.4rem;
+}
+
+.contact .contact__form .btn__contact:focus {
+  outline: none;
+  border: none;
+}
+
+.footer {
+  min-height: 46rem;
+  padding-top: 13.5rem;
+}
+
+.footer .nav.nav__footer {
+  height: auto;
+}
+
+.footer .nav.nav__footer .nav__brand {
+  text-align: center;
+}
+
+.footer .nav.nav__footer .nav__menu {
+  margin-top: 2.6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .nav.nav__footer .nav__menu .nav__link {
+  text-transform: uppercase;
+}
+
+.footer .socials {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .socials .socials__icon {
+  padding: 0 1.5rem;
+  border-right: 1px solid #555;
+}
+
+.footer .socials .socials__icon .socials__link {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: #30383b;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.footer .socials .socials__icon .socials__link:hover {
+  color: #ff817e;
+}
+
+.footer .socials .socials__icon:last-child {
+  border: 0;
+}
+
+.footer .text__footer {
+  margin-top: 4.6rem;
+  font-family: "roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.footer .text__footer a {
+  color: #ff817e;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

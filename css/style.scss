@@ -1,0 +1,819 @@
+@import "reset";
+@import "setting";
+
+$clrMuted: #888;
+$clrLight: #999;
+$clrWhite: #fff;
+$clrBlack: #1e2528;
+$clrSecondBlack: #263a41;
+$clrOrange: #ff817e;
+$clrMiddle: #555;
+$clrBorder: #e3e6ea;
+
+$bgOrange: #ff817e;
+$bgDark: #30383b;
+$clrGray: #dddddd;
+$bgOrangeLight: #ffc3c2;
+$bgLight: #f1f1f1;
+$bgSnow: #fff9f8;
+
+$fontRoboto: "roboto", sans-serif;
+$transAll: all 0.35s ease-in-out;
+$boxShadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
+
+.text-title {
+  font-size: 4.2rem;
+  color: $clrBlack;
+  line-height: 5.5rem;
+}
+
+.text-title-sm {
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  color: $clrSecondBlack;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: $clrMuted;
+}
+
+.text-light {
+  color: $clrLight;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-info {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  margin-top: 2rem;
+  font-family: $fontRoboto;
+  letter-spacing: 0.03rem;
+}
+
+.text-info-sm {
+  font-size: 1.4rem;
+  line-height: 2.7rem;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-orange {
+  background-color: $bgOrange;
+}
+
+.bg-dark {
+  background-color: $bgDark;
+}
+
+.bg-snow {
+  background-color: $bgSnow;
+}
+
+.btn-read-more {
+  width: 17rem;
+  height: 5rem;
+  display: block;
+  margin: 0 auto;
+
+  line-height: 5rem;
+  text-align: center;
+  border-radius: 5rem;
+
+  font-family: $fontRoboto;
+  font-size: 1.3rem;
+}
+
+.image {
+  margin: 0 auto;
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+.header,
+.main,
+.footer {
+  max-width: 192rem;
+  margin: 0 auto;
+}
+
+.header__banner {
+  width: 100%;
+  min-height: 89rem;
+  background-image: url(../images/04_SPA_banner1.png),
+    url(../images/04_SPA_banner2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 14.5rem left, bottom right;
+  padding-top: 6rem;
+}
+
+.nav {
+  height: 5rem;
+
+  .nav__brand {
+    .nav__logo {
+      padding-left: 0.7rem;
+      line-height: 4.8rem;
+      position: relative;
+
+      font-family: "Playfair Display";
+      font-size: 3rem;
+      font-weight: bold;
+      color: #211833;
+      letter-spacing: 0.1rem;
+
+      &::after {
+        content: "";
+        width: 5rem;
+        height: 4.1rem;
+        background: url(../images/04_SPA_icon1.png) no-repeat;
+
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .nav__menu {
+    display: flex;
+    justify-content: flex-start;
+
+    .nav__item {
+      margin-right: 5rem;
+
+      .nav__link {
+        font-family: $fontRoboto;
+        font-size: 1.4rem;
+        line-height: 4.5rem;
+        font-weight: bold;
+        color: $clrSecondBlack;
+      }
+    }
+  }
+}
+
+.hero {
+  margin-top: 15rem;
+
+  .hero__title1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: $clrOrange;
+    line-height: 7.2rem;
+  }
+
+  .hero__title2 {
+    font-size: 6rem;
+    color: $clrBlack;
+    line-height: 7.5rem;
+  }
+
+  .hero__info {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    color: $clrMiddle;
+    line-height: 2.7rem;
+  }
+
+  .hero__button {
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .hero__link {
+      width: 17rem;
+      height: 5rem;
+      line-height: 5rem;
+
+      display: block;
+      margin-right: 5.5rem;
+
+      text-align: center;
+      font-family: $fontRoboto;
+      font-size: 1.3rem;
+
+      i.fa-arrow-right {
+        margin-left: 1rem;
+      }
+    }
+
+    .btn-video {
+      display: flex;
+      align-items: center;
+      position: relative;
+      top: 0.8rem;
+
+      .play {
+        display: inline-block;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 1.5rem;
+
+        border-radius: 50%;
+        background-color: #fcf5ee;
+        position: relative;
+
+        &::after {
+          content: "";
+          border-top: 0.5rem solid transparent;
+          border-bottom: 0.5rem solid transparent;
+          border-left: 1rem solid $clrOrange;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-25%, -50%);
+        }
+      }
+
+      .btn-text {
+        font-family: $fontRoboto;
+        font-size: 1.5rem;
+        color: $clrMiddle;
+      }
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  min-height: 71.5rem;
+  background-image: url(../images/04_SPA_banner3.png),
+    url(../images/04_SPA_banner4.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 1.5rem left 32.5rem, top 27.5rem right 13rem;
+
+  .container,
+  .row {
+    height: 71.5rem;
+  }
+
+  .icon__image {
+    width: 8.4rem;
+    height: 7rem;
+    margin-bottom: 2rem;
+  }
+
+  .text__about {
+    font-family: $fontRoboto;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 5.4rem;
+
+    margin-bottom: 0.6rem;
+  }
+
+  .text-info-about {
+    margin-top: 3rem;
+  }
+
+  .hero__button {
+    margin-top: 6.6rem;
+  }
+}
+
+.feature {
+  width: 100%;
+  min-height: 57rem;
+
+  .feature__row {
+    width: 100%;
+    height: 57rem;
+    margin: 0 -0.25rem;
+
+    display: flex;
+
+    .feature__col {
+      width: 25%;
+      height: 57rem;
+      padding: 0 0.25rem;
+
+      .feature__content {
+        width: 100%;
+        height: 100%;
+        background: url(../images/04_SPA_big-image.png);
+
+        background-size: cover;
+        background-position: center center;
+
+        position: relative;
+        transition: $transAll;
+        cursor: pointer;
+
+        .hover__content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          opacity: 0;
+          visibility: hidden;
+          transition: $transAll;
+
+          .image {
+            width: 4.7rem;
+            height: 4.2rem;
+          }
+
+          .feature__info {
+            margin-top: 2rem;
+
+            .feature__text {
+              font-size: 2.2rem;
+              line-height: 2.7rem;
+            }
+          }
+        }
+
+        &:hover {
+          background-image: url(../images/04_SPA_big-image1.png);
+          .hover__content {
+            opacity: 1;
+            visibility: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+.service,
+.blog {
+  margin-top: 12.8rem;
+
+  .service__products {
+    margin-top: 8.5rem;
+
+    .service__product {
+      padding: 2rem;
+      padding-bottom: 5rem;
+      margin-bottom: 4rem;
+      border: 0.1rem solid $clrBorder;
+
+      transition: $transAll;
+
+      .image {
+        width: 100%;
+        height: 26.5rem;
+      }
+
+      .product__info {
+        margin-top: 2rem;
+
+        p {
+          margin-top: 0.8rem;
+        }
+
+        .btn-product {
+          margin-top: 4rem;
+          transition: $transAll;
+          &:hover {
+            background-color: $bgOrange;
+          }
+        }
+      }
+
+      &:hover {
+        border-color: transparent;
+        box-shadow: $boxShadow;
+      }
+    }
+  }
+}
+
+.testimonials {
+  width: 100%;
+  margin-top: 10rem;
+  padding: 13.5rem 0;
+
+  .tes__item {
+    .tes__quote {
+      font-size: 6rem;
+      color: $clrOrange;
+    }
+
+    .tes__text {
+      margin-top: 3.5rem;
+      font-size: 1.8rem;
+      color: $clrSecondBlack;
+      line-height: 3.5rem;
+    }
+
+    .tes__image {
+      margin-top: 4.3rem;
+      .image {
+        width: 7.6rem;
+        height: 7.6rem;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+
+    .tes__sign {
+      margin-top: 2.5rem;
+      font-size: 2.2rem;
+      line-height: 3.5rem;
+      color: $clrSecondBlack;
+
+      span {
+        font-family: $fontRoboto;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .owl-theme {
+    .owl-nav.disabled {
+      & + .owl-dots {
+        margin-top: 5rem;
+      }
+    }
+
+    .owl-dots {
+      button.owl-dot {
+        &:focus {
+          outline: none;
+          border: none;
+        }
+
+        span {
+          background-color: #ffc3c2;
+        }
+
+        &:hover,
+        &.active {
+          span {
+            background-color: $clrOrange;
+          }
+        }
+      }
+    }
+  }
+}
+
+.team {
+  width: 100%;
+  padding-top: 13rem;
+  padding-bottom: 13rem;
+
+  .team__content {
+    margin-top: 8.5rem;
+
+    .team__partner {
+      position: relative;
+      transition: $transAll;
+
+      margin-bottom: 15.5rem;
+
+      .partner__info {
+        width: 30rem;
+        min-height: 17rem;
+        background-color: $clrWhite;
+        padding-top: 3.5rem;
+
+        position: absolute;
+        bottom: -11.7rem;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: $transAll;
+
+        .text-info-partner {
+          font-family: $fontRoboto;
+          font-size: 1.5rem;
+          line-height: 2.7rem;
+        }
+
+        .partner__contact {
+          margin-top: 2.3rem;
+          ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+              margin: 0 0.75rem;
+
+              a {
+                width: 3rem;
+                height: 3rem;
+                display: block;
+                line-height: 3rem;
+                text-align: center;
+
+                border: 0.1rem solid $bgDark;
+                border-radius: 50%;
+                background-color: transparent;
+                color: $bgDark;
+                transition: $transAll;
+
+                &:hover {
+                  border: 0.1rem solid $bgOrange;
+                  background-color: $bgOrange;
+                  color: $clrWhite;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: $boxShadow;
+
+        .partner__info {
+          bottom: -5.3rem;
+        }
+      }
+    }
+  }
+}
+// do after
+.appointment {
+  width: 100%;
+  // margin-top: 0.3rem;
+  min-height: 64.2rem;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    width: calc(50% - 18rem);
+    // when reponsive width = 4col
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url(../images/04_SPA_image778x642.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .form {
+    margin-top: 9rem;
+    .form__item {
+      .item__content {
+        position: relative;
+
+        label {
+          position: absolute;
+          bottom: 1.7rem;
+          right: 0.5rem;
+          // transform: translateY(-50%);
+
+          color: $clrLight;
+          font-size: 1.2rem;
+
+          cursor: pointer;
+        }
+        input,
+        select,
+        textarea {
+          width: 100%;
+          margin-top: 2.2rem;
+          appearance: none;
+
+          background-color: inherit;
+          color: $clrLight;
+          font-family: $fontRoboto;
+          font-size: 1.2rem;
+
+          border: none;
+          padding: 1.7rem 0;
+
+          &::placeholder {
+            font-family: inherit;
+            font-size: 1.2rem;
+            color: $clrLight;
+            text-transform: uppercase;
+          }
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+
+        input[type="number"] {
+          &::-webkit-inner-spin-button {
+            display: none;
+          }
+        }
+
+        textarea {
+          margin-top: 5.5rem;
+        }
+      }
+
+      .line {
+        width: 100%;
+        height: 0.1rem;
+        background-color: $clrLight;
+      }
+    }
+
+    .btn-appointment {
+      outline: none;
+      border: none;
+
+      width: 20rem;
+      height: 5rem;
+      margin-top: 3.8rem;
+      text-align: center;
+      line-height: 5rem;
+
+      border-radius: 5rem;
+      font-family: $fontRoboto;
+      font-size: 1.4rem;
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+// do after
+
+.blog {
+  margin-top: 13.2rem;
+  .item__date {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.7rem;
+    li {
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      font-family: $fontRoboto;
+      text-transform: uppercase;
+      color: $clrMuted;
+    }
+  }
+}
+
+.contact {
+  width: 100%;
+  padding: 14rem;
+
+  .contact__item {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .contact__icon {
+      width: 5rem;
+      height: 5rem;
+      display: block;
+      line-height: 5rem;
+      text-align: center;
+
+      border-radius: 50%;
+      background-color: $bgOrange;
+      color: $clrWhite;
+
+      font-size: 1.6rem;
+    }
+
+    .contact__link {
+      width: calc(100% - 8rem);
+      font-family: $fontRoboto;
+      font-size: 1.4rem;
+      color: $clrMuted;
+      line-height: 2.7rem;
+    }
+  }
+
+  .contact__form {
+    .contact-name,
+    .contact-email,
+    .contact-comment {
+      border: 0.05rem solid $clrBorder;
+      width: 100%;
+      padding: 1.7rem 2.2rem;
+
+      font-family: $fontRoboto;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: $clrLight;
+
+      margin-bottom: 2rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .contact-comment {
+      height: 15rem;
+      padding-top: 3.2rem;
+      padding-left: 2.2rem;
+    }
+
+    .btn__contact {
+      outline: none;
+      border: none;
+
+      width: 17rem;
+      height: 5rem;
+      margin-top: 0.7rem;
+      text-align: center;
+      line-height: 5rem;
+
+      border-radius: 5rem;
+      font-family: $fontRoboto;
+      font-size: 1.4rem;
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+.footer {
+  min-height: 46rem;
+  padding-top: 13.5rem;
+
+  .nav.nav__footer {
+    height: auto;
+
+    .nav__brand {
+      text-align: center;
+    }
+
+    .nav__menu {
+      margin-top: 2.6rem;
+      justify-content: center;
+
+      .nav__link {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .socials {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+
+    .socials__icon {
+      padding: 0 1.5rem;
+      border-right: 1px solid $clrMiddle;
+      .socials__link {
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+        color: $bgDark;
+        transition: $transAll;
+
+        &:hover {
+          color: $clrOrange;
+        }
+      }
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+
+  .text__footer {
+    margin-top: 4.6rem;
+    font-family: $fontRoboto;
+    font-size: 1.3rem;
+
+    a {
+      color: $bgOrange;
+      text-transform: uppercase;
+    }
+  }
+}
