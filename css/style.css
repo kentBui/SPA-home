@@ -651,6 +651,10 @@ ol {
 
 .team .team__content .team__partner .partner__info .partner__contact {
   margin-top: 2.3rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .team .team__content .team__partner .partner__info .partner__contact ul {
@@ -693,6 +697,13 @@ ol {
 
 .team .team__content .team__partner:hover .partner__info {
   bottom: -5.3rem;
+  -webkit-box-shadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.team .team__content .team__partner:hover .partner__info .partner__contact {
+  visibility: inherit;
+  opacity: 1;
 }
 
 .appointment {

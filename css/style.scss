@@ -511,6 +511,10 @@ $boxShadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
 
         .partner__contact {
           margin-top: 2.3rem;
+          opacity: 0;
+          visibility: hidden;
+          transition: $transAll;
+
           ul {
             display: flex;
             justify-content: center;
@@ -547,6 +551,12 @@ $boxShadow: 1px 10px 20px 0px rgba(0, 0, 0, 0.1);
 
         .partner__info {
           bottom: -5.3rem;
+          box-shadow: $boxShadow;
+
+          .partner__contact {
+            visibility: inherit;
+            opacity: 1;
+          }
         }
       }
     }
